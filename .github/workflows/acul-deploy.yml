@@ -48,10 +48,7 @@ jobs:
         if: steps.check-targets.outputs.has_targets == 'true'
         shell: bash
         working-directory: ${{ env.WORKING_DIR }}
-        env:
-          NPM_CONFIG_REGISTRY: "https://registry.npmjs.org"
         run: |
-          npm config set registry https://registry.npmjs.org/
           npm install --include=optional --fund=false --audit=false
 
       - name: Build application
