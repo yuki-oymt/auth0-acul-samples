@@ -15,7 +15,7 @@ on:
 
 env:
   NODE_VERSION: "22"
-  WORKING_DIR: "."
+  WORKING_DIR: "react-js"
 
 jobs:
   build-and-deploy:
