@@ -20,7 +20,6 @@ runs:
         echo "Syncing ./dist to s3://${{ inputs.s3-bucket-name }}/"
         aws s3 sync ./dist s3://${{ inputs.s3-bucket-name }}/ \
           --delete \
-          --quiet \
           --cache-control "max-age=31536000,public,immutable"
 
         echo "✅ Assets successfully uploaded to S3 bucket: ${{ inputs.s3-bucket-name }}"
